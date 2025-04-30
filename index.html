@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherSphere ☀️</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <div class="weather-side">
+            <div class="weather-gradient"></div>
+            <div class="date-container">
+                <h2 class="date-dayname" id="dayname">Tuesday</h2>
+                <span class="date-day" id="date">15 Jan 2023</span>
+                <i class="location-icon fas fa-map-marker-alt"></i>
+                <span class="location" id="location">New York, US</span>
+            </div>
+            <div class="weather-container">
+                <i class="weather-icon" id="weather-icon"></i>
+                <h1 class="weather-temp" id="temperature">24°C</h1>
+                <h3 class="weather-desc" id="weather-description">Sunny</h3>
+            </div>
+        </div>
+        <div class="info-side">
+            <div class="today-info-container">
+                <div class="today-info">
+                    <div class="precipitation">
+                        <span class="title">PRECIPITATION</span>
+                        <span class="value" id="precipitation">0%</span>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="humidity">
+                        <span class="title">HUMIDITY</span>
+                        <span class="value" id="humidity">34%</span>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="wind">
+                        <span class="title">WIND</span>
+                        <span class="value" id="wind">6 km/h</span>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="pressure">
+                        <span class="title">PRESSURE</span>
+                        <span class="value" id="pressure">1012 hPa</span>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="visibility">
+                        <span class="title">VISIBILITY</span>
+                        <span class="value" id="visibility">10 km</span>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="week-container">
+                <ul class="week-list" id="forecast-list">
+                    <!-- Forecast items will be added here dynamically -->
+                </ul>
+            </div>
+            <div class="location-container">
+                <button class="location-button" id="refresh-btn">
+                    <i class="fas fa-sync-alt"></i>
+                    <span>Refresh</span>
+                </button>
+                <div class="search-box">
+                    <input type="text" id="city-input" placeholder="Search city...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="loader-container" id="loader">
+        <div class="loader"></div>
+        <p>Fetching weather data...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
